@@ -1,0 +1,22 @@
+# Step #1:Install Argo Rollouts controller on Minikube
+Create the namespace for installation of the Argo Rollouts controller
+
+kubectl create namespace argo-rollouts
+kubectl apply -n argo-rollouts -f https://github.com/argoproj/argorollouts/releases/latest/download/install.yaml
+
+
+Now, you will see the controller and other components have been deployed. Wait for the pods to be in the Running state.
+
+kubectl get all -n argo-rollouts
+
+Install Argo Rollouts Kubectl plugin with curl for easy interaction with Rollout controller and resources with below command.
+
+curl -LO https://github.com/argoproj/argo-rollouts/releases/latest/download/kubectl-argo-rollouts-linux-amd64
+chmod +x ./kubectl-argo-rollouts-linux-amd64
+sudo mv ./kubectl-argo-rollouts-linux-amd64 /usr/local/bin/kubectl-argo-rollouts
+kubectl argo rollouts version
+
+Argo Rollouts comes with its own GUI as well that you can access with the below command.
+
+kubectl argo rollouts dashboard
+Now, you can access Argo Rollout console, by accessing http://localhost:3100 on your browser. You would be presented with UI as shown below.
