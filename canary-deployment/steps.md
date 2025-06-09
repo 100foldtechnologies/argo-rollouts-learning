@@ -9,7 +9,7 @@ Sudo User with admin privileges
 Docker / Virtual Machine Manager – KVM & VirtualBox
 
 
-# Install Argo Rollouts controller on Minikube
+
 # Install Docker
 <pre> sudo apt update </pre>
 <pre> # Add Docker's official GPG key:
@@ -53,7 +53,7 @@ mkdir -p ~/.local/bin
 mv ./kubectl ~/.local/bin/kubectl
 </pre>
 
-
+# Install Argo Rollouts controller on Minikube
 Create the namespace for installation of the Argo Rollouts controller
 
 <pre>kubectl create namespace argo-rollouts
