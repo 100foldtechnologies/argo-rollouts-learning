@@ -57,7 +57,7 @@ mv ./kubectl ~/.local/bin/kubectl
 Create the namespace for installation of the Argo Rollouts controller
 
 <pre>kubectl create namespace argo-rollouts
-kubectl apply -n argo-rollouts -f https://github.com/argoproj/argorollouts/releases/latest/download/install.yaml
+      kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
 </pre>
 Now, you will see the controller and other components have been deployed. Wait for the pods to be in the Running state.
 
